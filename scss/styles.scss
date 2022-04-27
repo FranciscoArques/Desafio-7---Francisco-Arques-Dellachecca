@@ -1,0 +1,379 @@
+/* GENERAL (APLICA PARA TODO EL SITIO) */
+
+@import "vars";
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.bootstrapRepair {
+    color: #000;
+    font-weight: bold;
+}
+
+.bootstrapR2 {
+    color: $color;
+    font-size: 140%;
+}
+
+.imagenDeFondo {
+    background-image: url(../img/imgDeFondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    background-attachment: fixed;
+}
+
+.newNav {
+    display: flex;
+    display: block;
+    position: sticky;
+    top: 0%;
+    border-bottom: #000 3px solid;
+    z-index: 1;
+}
+
+.bg-light {
+    background-color: #4b380e !important;
+}
+
+.navbar-brand {
+    color: $color !important;
+}
+
+.nav-link {
+    color: $color !important;
+}
+
+.navIndex {
+    display: flex;
+    display: block;
+    position: sticky;
+    top: 0%;
+    bottom: 0%;
+    width: 100%;
+    background-color: #4b380e;
+    z-index: 1;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+    overflow-x: hidden;
+}
+
+#listaEncabezado 
+    li {
+        list-style: none;
+        padding: 1.5% 12.5%;
+        a {
+            text-decoration: none;
+            color: $color;
+            font-size: 100%;
+            a:hover {
+                color: black;
+            }
+        }
+    }
+
+@media screen and (min-width: 768px) {
+    #listaEncabezado {
+        width: 50%;
+        display: flex;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    #listaEncabezado {
+        width: 30%;
+        display: flex;
+    } 
+}
+
+@media screen and (max-width: 560px) {
+    #listaEncabezado {
+        width: 7%;
+        display: flex;
+    } 
+}
+
+.sectionPrimerTexto {
+    display: block;
+    margin: 2.5%;
+    padding: 2%;
+    background-color: $background-color;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 125%;
+    color: rgb(0, 0, 0);
+    opacity: 0.85;
+
+    .sectionPrimerTexto_texto {
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 120%;
+    }
+
+        p {
+            color: $color;
+        }
+}
+
+.footerSitio {
+    background-color: $background-color;
+    margin: 0%;
+    margin-top: 0.5%;
+    padding: 0%;
+    border-top: #000 3px solid;
+    border-bottom: #000 3px solid;
+
+    .footerSitio_parrafo {
+        background-color: $background-color;
+        margin: 0,5%;
+        margin-bottom: 0%;
+        padding: 0.25%;
+        height: 1%;
+        text-align: center;
+        font-size: 80%;
+        font-family: 'Anonymous Pro', monospace;
+        font-weight: bold;
+        font-style: italic;
+        color: #000;
+    }
+}
+
+/* SECCIÓN INDEX */
+
+.textoH1index{
+    background-color: #b37211c0;
+    text-align: center;
+    line-height: 2;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 160%;
+    border-bottom: #000 3px solid;
+}
+
+@media screen and (min-width: 768px){
+    .textoH1index 
+        img {
+            max-width: 12%;
+            max-height: 12%;
+            margin-top: 1.5%;
+            cursor: pointer;
+        }
+}
+
+@media screen and (max-width: 768px){
+    .textoH1index 
+        img {
+            max-width: 25%;
+            max-height: 12%;
+            margin-top: 1.5%;
+            cursor: pointer;
+        }
+}
+
+@media screen and (max-width: 768px) {
+    #grillaIndex {
+        display: grid;
+        grid-template-areas:"titulo"
+                            "foto2"
+                            "article"
+                            "foto"
+                            "mapa"
+                            "article2"
+                            "footerIndex";
+        grid-template-columns: (1fr);
+        grid-template-rows: (7, 1fr);
+        grid-gap: 1%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #grillaIndex {
+        display: grid;
+        grid-template-areas:"titulo titulo titulo"
+                            "article foto2 mapa"
+                            "article foto mapa"
+                            "article article2 article2";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 0.5fr 2fr 2fr 2fr;
+        grid-gap: 1%;
+    } 
+}
+
+@media screen and (min-width: 768px) {
+    .primerH2index {
+        display: flex;
+        position: sticky;
+        top: 7%;
+        z-index: 1;
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 160%;
+        background-color: $background-color;
+        background-image: url(../img/cafefondo.png);
+        background-size: contain;
+        margin: 2% 0%;
+        padding: 2%;
+        border-top: #000 3px solid;
+        border-bottom: #000 3px solid;
+        color: $color;
+        grid-area: titulo;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .primerH2index {
+        display: block;
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 120%;
+        background-color: $background-color;
+        background-image: url(../img/cafefondo.png);
+        background-size: contain;
+        margin: 2% 0%;
+        padding: 2%;
+        opacity: 0.85;
+        border-top: #000 3px solid;
+        border-bottom: #000 3px solid;
+        color: $color;
+        grid-area: titulo;
+    }
+}
+
+.sectionPrimerTextoIndex {
+    display: block;
+    margin: 2.5%;
+    padding: 2%;
+    background-color: $background-color;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 125%;
+    color: rgb(0, 0, 0);
+    border: #000 3px solid;
+    opacity: 0.85;
+    grid-area: article;
+
+    .sectionPrimerTextoIndex_texto {
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 120%;
+        color: #000;
+        font-weight: bold;
+    }
+
+    p {
+        color: $color;
+    }
+
+}
+
+.imgCentrada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: foto;
+    border: #000 3px solid;
+    background-color: $background-color;
+    opacity: 0.85;
+    margin: 2.5%;
+    padding: 2%;
+
+    img {
+        max-width: 100%;
+        max-height: fit-content;
+        flex-wrap: wrap;
+    }
+
+}
+
+.imgCentrada2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5%;
+    padding: 2%;
+    grid-area: foto2;
+
+    img {
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+
+}
+
+.textoAdicional {
+    display: block;
+    margin: 1.5%;
+    padding: 2%;
+    background-color: $background-color;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 125%;
+    color: rgb(0, 0, 0);
+    border: #000 3px solid;
+    opacity: 0.85;
+    grid-area: article2;
+
+    .textoAdicional_texto {
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 120%;
+        color: #000;
+        font-weight: bold;
+
+    }
+    
+    p {
+        color: $color;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .textoAdicional {
+        margin-bottom: 25%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .textoAdicional {
+        margin-bottom: 35%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .textoAdicional {
+        margin-bottom: 50%;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .textoAdicional {
+        margin-bottom: 80%;
+    }
+}
+
+.mapaCementerio {
+    display: flex;
+    opacity: 0.85;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 125%;
+    text-align: center;
+    background-color: $background-color;
+    padding: 2%;
+    margin: 2.5%;
+    border: #000 3px solid;
+    grid-area: mapa;
+
+    iframe {
+        max-width: 93%;
+        height: 82%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
